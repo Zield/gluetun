@@ -128,7 +128,7 @@ func Test_versions(t *testing.T) {
 		"Windscribe": {
 			model:   models.WindscribeServer{},
 			version: allServers.Windscribe.Version,
-			digest:  "0bd93da1",
+			digest:  "3954dcee",
 		},
 	}
 	for name, testCase := range testCases {
