@@ -1,24 +1,343 @@
 version: "3.7"
 services:
-  gluetun:
-    image: qmcgaw/gluetun
-    container_name: gluetun
-    cap_add:
-      - NET_ADMIN
-    network_mode: bridge
-    ports:
-      - 8888:8888/tcp # HTTP proxy
-      - 8388:8388/tcp # Shadowsocks
-      - 8388:8388/udp # Shadowsocks
-      - 8000:8000/tcp # Built-in HTTP control server
-    # command:
-    volumes:
-      - /yourpath:/gluetun
-    environment:
-      # More variables are available, see the readme table
-      - OPENVPN_USER=
-      - OPENVPN_PASSWORD=
-      - VPNSP=private internet access
-      # Timezone for accurate logs times
-      - TZ=
-    restart: always
+ gluetun0:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8888:8888/tcp # HTTP proxy
+   - 8388:8388/tcp # Shadowsocks
+   - 8388:8388/udp # Shadowsocks
+   - 8000:8000/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun0
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Australia Sydney
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun1:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8887:8887/tcp # HTTP proxy
+   - 8387:8387/tcp # Shadowsocks
+   - 8387:8387/udp # Shadowsocks
+   - 7999:7999/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun1
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Australia Brisbane
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun2:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8886:8886/tcp # HTTP proxy
+   - 8386:8386/tcp # Shadowsocks
+   - 8386:8386/udp # Shadowsocks
+   - 7998:7998/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun2
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Australia Adelaide
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun3:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8885:8885/tcp # HTTP proxy
+   - 8385:8385/tcp # Shadowsocks
+   - 8385:8385/udp # Shadowsocks
+   - 7997:7997/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun3
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Australia Perth
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun4:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8884:8884/tcp # HTTP proxy
+   - 8384:8384/tcp # Shadowsocks
+   - 8384:8384/udp # Shadowsocks
+   - 7996:7996/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun4
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Canada Toronto
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun5:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8883:8883/tcp # HTTP proxy
+   - 8383:8383/tcp # Shadowsocks
+   - 8383:8383/udp # Shadowsocks
+   - 7995:7995/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun5
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Canada Montreal
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun6:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8882:8882/tcp # HTTP proxy
+   - 8382:8382/tcp # Shadowsocks
+   - 8382:8382/udp # Shadowsocks
+   - 7994:7994/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun6
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=France Paris
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun7:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8881:8881/tcp # HTTP proxy
+   - 8381:8381/tcp # Shadowsocks
+   - 8381:8381/udp # Shadowsocks
+   - 7993:7993/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun7
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Hong Kong
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun8:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8880:8880/tcp # HTTP proxy
+   - 8380:8380/tcp # Shadowsocks
+   - 8380:8380/udp # Shadowsocks
+   - 7992:7992/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun8
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun9:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8879:8879/tcp # HTTP proxy
+   - 8379:8379/tcp # Shadowsocks
+   - 8379:8379/udp # Shadowsocks
+   - 7991:7991/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun9
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Malaysia
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun10:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8878:8878/tcp # HTTP proxy
+   - 8378:8378/tcp # Shadowsocks
+   - 8378:8378/udp # Shadowsocks
+   - 7990:7990/tcp # Built-in HTTP control server
+  #command:
+  volumes:
+   - /yourpath:/gluetun10
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=New Zealand
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ visi0_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun0
+  volumes:
+   - /yourpath:/visi_0_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Australia Sydney
+  restart: always
+ visi1_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun1
+  volumes:
+   - /yourpath:/visi_1_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Australia Brisbane
+  restart: always
+ visi2_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun2
+  volumes:
+   - /yourpath:/visi_2_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Australia Adelaide
+  restart: always
+ visi3_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun3
+  volumes:
+   - /yourpath:/visi_3_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Australia Perth
+  restart: always
+ visi4_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun4
+  volumes:
+   - /yourpath:/visi_4_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Canada Toronto
+  restart: always
+ visi5_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun5
+  volumes:
+   - /yourpath:/visi_5_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Canada Montreal
+  restart: always
+ visi6_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun6
+  volumes:
+   - /yourpath:/visi_6_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=France Paris
+  restart: always
+ visi7_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun7
+  volumes:
+   - /yourpath:/visi_7_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Hong Kong
+  restart: always
+ visi8_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun8
+  volumes:
+   - /yourpath:/visi_8_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo
+  restart: always
+ visi9_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun9
+  volumes:
+   - /yourpath:/visi_9_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Malaysia
+  restart: always
+ visi10_0:
+  image: zield1201/visi_puppet_node:latest
+  network_mode: service:gluetun10
+  volumes:
+   - /yourpath:/visi_10_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=New Zealand
+  restart: always

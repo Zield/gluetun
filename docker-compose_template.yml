@@ -1,0 +1,71 @@
+version: "3.7"
+services:
+  gluetun:
+    image: qmcgaw/gluetun
+    container_name: gluetun
+    cap_add:
+      - NET_ADMIN
+    network_mode: bridge
+    ports:
+      - 8888:8888/tcp # HTTP proxy
+      - 8388:8388/tcp # Shadowsocks
+      - 8388:8388/udp # Shadowsocks
+      - 8000:8000/tcp # Built-in HTTP control server
+    #command:
+    volumes:
+      - /yourpath:/gluetun1
+    environment:
+      # More variables are available, see the readme table
+      - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+      - OPENVPN_PASSWORD=K5smxaDJSm63kSE7huRnUvHd
+      - VPNSP=surfshark
+      - REGION=Australia US
+      # Timezone for accurate logs times
+      - TZ=Sydney/Australia
+    restart: always
+  gluetun2:
+    image: qmcgaw/gluetun
+    container_name: gluetun2
+    cap_add:
+      - NET_ADMIN
+    network_mode: bridge
+    ports:
+      - 8889:8889/tcp # HTTP proxy
+      - 8389:8389/tcp # Shadowsocks
+      - 8389:8389/udp # Shadowsocks
+      - 8009:8009/tcp # Built-in HTTP control server
+    #command:
+    volumes:
+      - /yourpath:/gluetun2
+    environment:
+      # More variables are available, see the readme table
+      - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+      - OPENVPN_PASSWORD=K5smxaDJSm63kSE7huRnUvHd
+      - VPNSP=surfshark
+      - REGION=New Zealand
+      # Timezone for accurate logs times
+      - TZ=Sydney/Australia
+    restart: always
+  gluetun3:
+    image: qmcgaw/gluetun
+    container_name: gluetun3
+    cap_add:
+      - NET_ADMIN
+    network_mode: bridge
+    ports:
+      - 8887:8887/tcp # HTTP proxy
+      - 8387:8387/tcp # Shadowsocks
+      - 8387:8387/udp # Shadowsocks
+      - 8007:8007/tcp # Built-in HTTP control server
+    #command:
+    volumes:
+      - /yourpath:/gluetun3
+    environment:
+      # More variables are available, see the readme table
+      - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+      - OPENVPN_PASSWORD=K5smxaDJSm63kSE7huRnUvHd
+      - VPNSP=surfshark
+      - REGION=Canada Toronto
+      # Timezone for accurate logs times
+      - TZ=Sydney/Australia
+    restart: always

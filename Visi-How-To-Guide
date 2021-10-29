@@ -1,0 +1,8 @@
+This is the visi how to guide.
+Go to docker generator.js
+Choose the regions you want to use and check the current surfshark api credentials are correct
+run the command node docker_generator.js to generate the composer file to create the gluetun vpn gateways and link them to the latest build of visi at zield1201
+Once that is done you need to check the latest version of the visi at the zield1201 gitlab repository has the latest code.
+Once all good, go to terminal and type docker-compose up
+It will launch all the required gluetuns and pull the correct visi build to use
+And awwwwaaaaay we go!
