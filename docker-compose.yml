@@ -250,6 +250,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=Australia Sydney
+   - TIMEZONE=Australia/Sydney
   restart: always
  visi1_0:
   image: zield1201/visi_puppet_node:latest
@@ -259,6 +260,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=Australia Brisbane
+   - TIMEZONE=Australia/Brisbane
   restart: always
  visi2_0:
   image: zield1201/visi_puppet_node:latest
@@ -268,6 +270,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=Australia Adelaide
+   - TIMEZONE=Australia/Adelaide
   restart: always
  visi3_0:
   image: zield1201/visi_puppet_node:latest
@@ -277,6 +280,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=Australia Perth
+   - TIMEZONE=Australia/Perth
   restart: always
  visi4_0:
   image: zield1201/visi_puppet_node:latest
@@ -286,6 +290,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=Canada Toronto
+   - TIMEZONE=America/Toronto
   restart: always
  visi5_0:
   image: zield1201/visi_puppet_node:latest
@@ -295,6 +300,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=Canada Montreal
+   - TIMEZONE=America/Montreal
   restart: always
  visi6_0:
   image: zield1201/visi_puppet_node:latest
@@ -304,6 +310,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=France Paris
+   - TIMEZONE=Europe/Paris
   restart: always
  visi7_0:
   image: zield1201/visi_puppet_node:latest
@@ -313,6 +320,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=Hong Kong
+   - TIMEZONE=Asia/Hong_Kong
   restart: always
  visi8_0:
   image: zield1201/visi_puppet_node:latest
@@ -322,6 +330,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=Japan Tokyo
+   - TIMEZONE=Asia/Tokyo
   restart: always
  visi9_0:
   image: zield1201/visi_puppet_node:latest
@@ -331,6 +340,7 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=Malaysia
+   - TIMEZONE=Asia/Kuala_Lumpur
   restart: always
  visi10_0:
   image: zield1201/visi_puppet_node:latest
@@ -340,4 +350,5 @@ services:
   environment:
    # More variables are available, see the readme table
    - REGION=New Zealand
+   - TIMEZONE=Pacific/Auckland
   restart: always
