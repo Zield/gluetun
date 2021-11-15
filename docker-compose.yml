@@ -10,6 +10,10 @@ services:
    - 8388:8388/tcp # Shadowsocks
    - 8388:8388/udp # Shadowsocks
    - 8000:8000/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun0
@@ -18,7 +22,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=Australia Sydney
+   - REGION=US Atlanta
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -32,6 +36,10 @@ services:
    - 8387:8387/tcp # Shadowsocks
    - 8387:8387/udp # Shadowsocks
    - 7999:7999/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun1
@@ -40,7 +48,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=Australia Brisbane
+   - REGION=US Bend
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -54,6 +62,10 @@ services:
    - 8386:8386/tcp # Shadowsocks
    - 8386:8386/udp # Shadowsocks
    - 7998:7998/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun2
@@ -62,7 +74,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=Australia Adelaide
+   - REGION=US Boston
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -76,6 +88,10 @@ services:
    - 8385:8385/tcp # Shadowsocks
    - 8385:8385/udp # Shadowsocks
    - 7997:7997/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun3
@@ -84,7 +100,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=Australia Perth
+   - REGION=US Buffalo
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -98,6 +114,10 @@ services:
    - 8384:8384/tcp # Shadowsocks
    - 8384:8384/udp # Shadowsocks
    - 7996:7996/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun4
@@ -106,7 +126,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=Canada Toronto
+   - REGION=US Charlotte
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -120,6 +140,10 @@ services:
    - 8383:8383/tcp # Shadowsocks
    - 8383:8383/udp # Shadowsocks
    - 7995:7995/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun5
@@ -128,7 +152,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=Canada Montreal
+   - REGION=US Chicago
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -142,6 +166,10 @@ services:
    - 8382:8382/tcp # Shadowsocks
    - 8382:8382/udp # Shadowsocks
    - 7994:7994/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun6
@@ -150,7 +178,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=France Paris
+   - REGION=US Dallas
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -164,6 +192,10 @@ services:
    - 8381:8381/tcp # Shadowsocks
    - 8381:8381/udp # Shadowsocks
    - 7993:7993/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun7
@@ -172,7 +204,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=Hong Kong
+   - REGION=US Denver
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -186,6 +218,10 @@ services:
    - 8380:8380/tcp # Shadowsocks
    - 8380:8380/udp # Shadowsocks
    - 7992:7992/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun8
@@ -194,7 +230,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=Japan Tokyo
+   - REGION=US Detroit
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -208,6 +244,10 @@ services:
    - 8379:8379/tcp # Shadowsocks
    - 8379:8379/udp # Shadowsocks
    - 7991:7991/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun9
@@ -216,7 +256,7 @@ services:
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
    - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
    - VPNSP=surfshark
-   - REGION=Malaysia
+   - REGION=US Houston
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
@@ -230,9 +270,767 @@ services:
    - 8378:8378/tcp # Shadowsocks
    - 8378:8378/udp # Shadowsocks
    - 7990:7990/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
   #command:
   volumes:
    - /yourpath:/gluetun10
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Kansas City
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun11:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8877:8877/tcp # HTTP proxy
+   - 8377:8377/tcp # Shadowsocks
+   - 8377:8377/udp # Shadowsocks
+   - 7989:7989/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun11
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Latham
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun12:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8876:8876/tcp # HTTP proxy
+   - 8376:8376/tcp # Shadowsocks
+   - 8376:8376/udp # Shadowsocks
+   - 7988:7988/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun12
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Las Vegas
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun13:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8875:8875/tcp # HTTP proxy
+   - 8375:8375/tcp # Shadowsocks
+   - 8375:8375/udp # Shadowsocks
+   - 7987:7987/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun13
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Los Angeles
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun14:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8874:8874/tcp # HTTP proxy
+   - 8374:8374/tcp # Shadowsocks
+   - 8374:8374/udp # Shadowsocks
+   - 7986:7986/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun14
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Maryland
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun15:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8873:8873/tcp # HTTP proxy
+   - 8373:8373/tcp # Shadowsocks
+   - 8373:8373/udp # Shadowsocks
+   - 7985:7985/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun15
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Miami
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun16:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8872:8872/tcp # HTTP proxy
+   - 8372:8372/tcp # Shadowsocks
+   - 8372:8372/udp # Shadowsocks
+   - 7984:7984/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun16
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US New York City
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun17:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8871:8871/tcp # HTTP proxy
+   - 8371:8371/tcp # Shadowsocks
+   - 8371:8371/udp # Shadowsocks
+   - 7983:7983/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun17
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US New York City mp001
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun18:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8870:8870/tcp # HTTP proxy
+   - 8370:8370/tcp # Shadowsocks
+   - 8370:8370/udp # Shadowsocks
+   - 7982:7982/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun18
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US New York City st001
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun19:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8869:8869/tcp # HTTP proxy
+   - 8369:8369/tcp # Shadowsocks
+   - 8369:8369/udp # Shadowsocks
+   - 7981:7981/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun19
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US New York City st002
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun20:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8868:8868/tcp # HTTP proxy
+   - 8368:8368/tcp # Shadowsocks
+   - 8368:8368/udp # Shadowsocks
+   - 7980:7980/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun20
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US New York City st003
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun21:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8867:8867/tcp # HTTP proxy
+   - 8367:8367/tcp # Shadowsocks
+   - 8367:8367/udp # Shadowsocks
+   - 7979:7979/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun21
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US New York City st004
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun22:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8866:8866/tcp # HTTP proxy
+   - 8366:8366/tcp # Shadowsocks
+   - 8366:8366/udp # Shadowsocks
+   - 7978:7978/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun22
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US New York City st005
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun23:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8865:8865/tcp # HTTP proxy
+   - 8365:8365/tcp # Shadowsocks
+   - 8365:8365/udp # Shadowsocks
+   - 7977:7977/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun23
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Orlando
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun24:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8864:8864/tcp # HTTP proxy
+   - 8364:8364/tcp # Shadowsocks
+   - 8364:8364/udp # Shadowsocks
+   - 7976:7976/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun24
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Phoenix
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun25:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8863:8863/tcp # HTTP proxy
+   - 8363:8363/tcp # Shadowsocks
+   - 8363:8363/udp # Shadowsocks
+   - 7975:7975/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun25
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Salt Lake City
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun26:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8862:8862/tcp # HTTP proxy
+   - 8362:8362/tcp # Shadowsocks
+   - 8362:8362/udp # Shadowsocks
+   - 7974:7974/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun26
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US San Francisco
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun27:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8861:8861/tcp # HTTP proxy
+   - 8361:8361/tcp # Shadowsocks
+   - 8361:8361/udp # Shadowsocks
+   - 7973:7973/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun27
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Seatle
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun28:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8860:8860/tcp # HTTP proxy
+   - 8360:8360/tcp # Shadowsocks
+   - 8360:8360/udp # Shadowsocks
+   - 7972:7972/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun28
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US St Louis
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun29:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8859:8859/tcp # HTTP proxy
+   - 8359:8359/tcp # Shadowsocks
+   - 8359:8359/udp # Shadowsocks
+   - 7971:7971/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun29
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=US Tampa
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun30:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8858:8858/tcp # HTTP proxy
+   - 8358:8358/tcp # Shadowsocks
+   - 8358:8358/udp # Shadowsocks
+   - 7970:7970/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun30
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=UK Manchester
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun31:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8857:8857/tcp # HTTP proxy
+   - 8357:8357/tcp # Shadowsocks
+   - 8357:8357/udp # Shadowsocks
+   - 7969:7969/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun31
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=UK Glasgow
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun32:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8856:8856/tcp # HTTP proxy
+   - 8356:8356/tcp # Shadowsocks
+   - 8356:8356/udp # Shadowsocks
+   - 7968:7968/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun32
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=UK London mp001
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun33:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8855:8855/tcp # HTTP proxy
+   - 8355:8355/tcp # Shadowsocks
+   - 8355:8355/udp # Shadowsocks
+   - 7967:7967/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun33
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=United Arab Emirates
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun34:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8854:8854/tcp # HTTP proxy
+   - 8354:8354/tcp # Shadowsocks
+   - 8354:8354/udp # Shadowsocks
+   - 7966:7966/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun34
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Australia Sydney
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun35:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8853:8853/tcp # HTTP proxy
+   - 8353:8353/tcp # Shadowsocks
+   - 8353:8353/udp # Shadowsocks
+   - 7965:7965/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun35
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Australia Brisbane
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun36:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8852:8852/tcp # HTTP proxy
+   - 8352:8352/tcp # Shadowsocks
+   - 8352:8352/udp # Shadowsocks
+   - 7964:7964/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun36
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Australia Melbourne
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun37:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8851:8851/tcp # HTTP proxy
+   - 8351:8351/tcp # Shadowsocks
+   - 8351:8351/udp # Shadowsocks
+   - 7963:7963/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun37
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Australia Adelaide
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun38:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8850:8850/tcp # HTTP proxy
+   - 8350:8350/tcp # Shadowsocks
+   - 8350:8350/udp # Shadowsocks
+   - 7962:7962/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun38
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Australia Perth
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun39:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8849:8849/tcp # HTTP proxy
+   - 8349:8349/tcp # Shadowsocks
+   - 8349:8349/udp # Shadowsocks
+   - 7961:7961/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun39
   environment:
    # More variables are available, see the readme table
    - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
@@ -242,113 +1040,2307 @@ services:
    # Timezone for accurate logs times
    - TZ=Sydney/Australia
   restart: always
+ gluetun40:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8848:8848/tcp # HTTP proxy
+   - 8348:8348/tcp # Shadowsocks
+   - 8348:8348/udp # Shadowsocks
+   - 7960:7960/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun40
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=UK France
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun41:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8847:8847/tcp # HTTP proxy
+   - 8347:8347/tcp # Shadowsocks
+   - 8347:8347/udp # Shadowsocks
+   - 7959:7959/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun41
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=France Paris
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun42:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8846:8846/tcp # HTTP proxy
+   - 8346:8346/tcp # Shadowsocks
+   - 8346:8346/udp # Shadowsocks
+   - 7958:7958/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun42
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=France Marseille
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun43:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8845:8845/tcp # HTTP proxy
+   - 8345:8345/tcp # Shadowsocks
+   - 8345:8345/udp # Shadowsocks
+   - 7957:7957/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun43
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Germany Berlin
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun44:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8844:8844/tcp # HTTP proxy
+   - 8344:8344/tcp # Shadowsocks
+   - 8344:8344/udp # Shadowsocks
+   - 7956:7956/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun44
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=UK Germany
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun45:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8843:8843/tcp # HTTP proxy
+   - 8343:8343/tcp # Shadowsocks
+   - 8343:8343/udp # Shadowsocks
+   - 7955:7955/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun45
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Germany Frankfurt am Main
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun46:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8842:8842/tcp # HTTP proxy
+   - 8342:8342/tcp # Shadowsocks
+   - 8342:8342/udp # Shadowsocks
+   - 7954:7954/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun46
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Germany Frankfurt am Main st001
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun47:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8841:8841/tcp # HTTP proxy
+   - 8341:8341/tcp # Shadowsocks
+   - 8341:8341/udp # Shadowsocks
+   - 7953:7953/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun47
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Germany Frankfurt am Main st002
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun48:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8840:8840/tcp # HTTP proxy
+   - 8340:8340/tcp # Shadowsocks
+   - 8340:8340/udp # Shadowsocks
+   - 7952:7952/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun48
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Germany Frankfurt am Main st003
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun49:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8839:8839/tcp # HTTP proxy
+   - 8339:8339/tcp # Shadowsocks
+   - 8339:8339/udp # Shadowsocks
+   - 7951:7951/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun49
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Germany Frankfurt am Main st004
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun50:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8838:8838/tcp # HTTP proxy
+   - 8338:8338/tcp # Shadowsocks
+   - 8338:8338/udp # Shadowsocks
+   - 7950:7950/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun50
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Germany Frankfurt am Main st005
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun51:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8837:8837/tcp # HTTP proxy
+   - 8337:8337/tcp # Shadowsocks
+   - 8337:8337/udp # Shadowsocks
+   - 7949:7949/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun51
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Germany Frankfurt mp001
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun52:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8836:8836/tcp # HTTP proxy
+   - 8336:8336/tcp # Shadowsocks
+   - 8336:8336/udp # Shadowsocks
+   - 7948:7948/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun52
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Germany Singapour
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun53:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8835:8835/tcp # HTTP proxy
+   - 8335:8335/tcp # Shadowsocks
+   - 8335:8335/udp # Shadowsocks
+   - 7947:7947/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun53
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Canada Toronto
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun54:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8834:8834/tcp # HTTP proxy
+   - 8334:8334/tcp # Shadowsocks
+   - 8334:8334/udp # Shadowsocks
+   - 7946:7946/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun54
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Canada Toronto mp001
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun55:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8833:8833/tcp # HTTP proxy
+   - 8333:8333/tcp # Shadowsocks
+   - 8333:8333/udp # Shadowsocks
+   - 7945:7945/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun55
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Canada Montreal
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun56:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8832:8832/tcp # HTTP proxy
+   - 8332:8332/tcp # Shadowsocks
+   - 8332:8332/udp # Shadowsocks
+   - 7944:7944/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun56
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Canada Vancouver
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun57:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8831:8831/tcp # HTTP proxy
+   - 8331:8331/tcp # Shadowsocks
+   - 8331:8331/udp # Shadowsocks
+   - 7943:7943/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun57
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Singapore st001
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun58:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8830:8830/tcp # HTTP proxy
+   - 8330:8330/tcp # Shadowsocks
+   - 8330:8330/udp # Shadowsocks
+   - 7942:7942/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun58
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Singapore st002
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun59:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8829:8829/tcp # HTTP proxy
+   - 8329:8329/tcp # Shadowsocks
+   - 8329:8329/udp # Shadowsocks
+   - 7941:7941/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun59
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Singapore st003
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun60:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8828:8828/tcp # HTTP proxy
+   - 8328:8328/tcp # Shadowsocks
+   - 8328:8328/udp # Shadowsocks
+   - 7940:7940/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun60
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Hong Kong
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun61:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8827:8827/tcp # HTTP proxy
+   - 8327:8327/tcp # Shadowsocks
+   - 8327:8327/udp # Shadowsocks
+   - 7939:7939/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun61
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun62:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8826:8826/tcp # HTTP proxy
+   - 8326:8326/tcp # Shadowsocks
+   - 8326:8326/udp # Shadowsocks
+   - 7938:7938/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun62
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st001
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun63:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8825:8825/tcp # HTTP proxy
+   - 8325:8325/tcp # Shadowsocks
+   - 8325:8325/udp # Shadowsocks
+   - 7937:7937/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun63
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st002
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun64:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8824:8824/tcp # HTTP proxy
+   - 8324:8324/tcp # Shadowsocks
+   - 8324:8324/udp # Shadowsocks
+   - 7936:7936/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun64
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st003
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun65:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8823:8823/tcp # HTTP proxy
+   - 8323:8323/tcp # Shadowsocks
+   - 8323:8323/udp # Shadowsocks
+   - 7935:7935/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun65
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st004
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun66:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8822:8822/tcp # HTTP proxy
+   - 8322:8322/tcp # Shadowsocks
+   - 8322:8322/udp # Shadowsocks
+   - 7934:7934/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun66
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st005
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun67:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8821:8821/tcp # HTTP proxy
+   - 8321:8321/tcp # Shadowsocks
+   - 8321:8321/udp # Shadowsocks
+   - 7933:7933/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun67
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st006
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun68:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8820:8820/tcp # HTTP proxy
+   - 8320:8320/tcp # Shadowsocks
+   - 8320:8320/udp # Shadowsocks
+   - 7932:7932/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun68
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st007
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun69:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8819:8819/tcp # HTTP proxy
+   - 8319:8319/tcp # Shadowsocks
+   - 8319:8319/udp # Shadowsocks
+   - 7931:7931/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun69
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st008
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun70:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8818:8818/tcp # HTTP proxy
+   - 8318:8318/tcp # Shadowsocks
+   - 8318:8318/udp # Shadowsocks
+   - 7930:7930/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun70
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st009
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun71:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8817:8817/tcp # HTTP proxy
+   - 8317:8317/tcp # Shadowsocks
+   - 8317:8317/udp # Shadowsocks
+   - 7929:7929/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun71
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st010
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun72:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8816:8816/tcp # HTTP proxy
+   - 8316:8316/tcp # Shadowsocks
+   - 8316:8316/udp # Shadowsocks
+   - 7928:7928/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun72
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st011
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun73:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8815:8815/tcp # HTTP proxy
+   - 8315:8315/tcp # Shadowsocks
+   - 8315:8315/udp # Shadowsocks
+   - 7927:7927/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun73
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st012
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun74:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8814:8814/tcp # HTTP proxy
+   - 8314:8314/tcp # Shadowsocks
+   - 8314:8314/udp # Shadowsocks
+   - 7926:7926/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun74
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Japan Tokyo st013
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
+ gluetun75:
+  image: qmcgaw/gluetun
+  cap_add:
+   - NET_ADMIN
+  network_mode: bridge
+  ports:
+   - 8813:8813/tcp # HTTP proxy
+   - 8313:8313/tcp # Shadowsocks
+   - 8313:8313/udp # Shadowsocks
+   - 7925:7925/tcp # Built-in HTTP control server
+  healthcheck:
+   test: curl --fail -s https://ipinfo.io/ip || exit 1
+   timeout: 20s
+   retries: 10
+  #command:
+  volumes:
+   - /yourpath:/gluetun75
+  environment:
+   # More variables are available, see the readme table
+   - OPENVPN_USER=RCyCnnuqVrthRQNhRK69cQCp
+   - OPENVPN_PASSWORD=GjGVbbgafPrTKGCqRS2VtQu8
+   - VPNSP=surfshark
+   - REGION=Philippines Manila
+   # Timezone for accurate logs times
+   - TZ=Sydney/Australia
+  restart: always
  visi0_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun0
+  depends_on:
+   gluetun0:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_0_0
   environment:
    # More variables are available, see the readme table
-   - REGION=Australia Sydney
-   - TIMEZONE=Australia/Sydney
+   - REGION=US Atlanta
+   - WATCHER_TIMEZONE=US/Eastern
+   - WATCHER_TIMEZONE_OFFSET=-4
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=42
+   - END_WATCH_MINUTE=36
   restart: always
  visi1_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun1
+  depends_on:
+   gluetun1:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_1_0
   environment:
    # More variables are available, see the readme table
-   - REGION=Australia Brisbane
-   - TIMEZONE=Australia/Brisbane
+   - REGION=US Bend
+   - WATCHER_TIMEZONE=America/Bend
+   - WATCHER_TIMEZONE_OFFSET=-8
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=18
+   - END_WATCH_MINUTE=39
   restart: always
  visi2_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun2
+  depends_on:
+   gluetun2:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_2_0
   environment:
    # More variables are available, see the readme table
-   - REGION=Australia Adelaide
-   - TIMEZONE=Australia/Adelaide
+   - REGION=US Boston
+   - WATCHER_TIMEZONE=America/Boston
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=47
+   - END_WATCH_MINUTE=10
   restart: always
  visi3_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun3
+  depends_on:
+   gluetun3:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_3_0
   environment:
    # More variables are available, see the readme table
-   - REGION=Australia Perth
-   - TIMEZONE=Australia/Perth
+   - REGION=US Buffalo
+   - WATCHER_TIMEZONE=America/Buffalo
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=3
+   - END_WATCH_MINUTE=49
   restart: always
  visi4_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun4
+  depends_on:
+   gluetun4:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_4_0
   environment:
    # More variables are available, see the readme table
-   - REGION=Canada Toronto
-   - TIMEZONE=America/Toronto
+   - REGION=US Charlotte
+   - WATCHER_TIMEZONE=America/Charlotte
+   - WATCHER_TIMEZONE_OFFSET=-6
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=38
+   - END_WATCH_MINUTE=10
   restart: always
  visi5_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun5
+  depends_on:
+   gluetun5:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_5_0
   environment:
    # More variables are available, see the readme table
-   - REGION=Canada Montreal
-   - TIMEZONE=America/Montreal
+   - REGION=US Chicago
+   - WATCHER_TIMEZONE=America/Chicago
+   - WATCHER_TIMEZONE_OFFSET=-6
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=49
+   - END_WATCH_MINUTE=35
   restart: always
  visi6_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun6
+  depends_on:
+   gluetun6:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_6_0
   environment:
    # More variables are available, see the readme table
-   - REGION=France Paris
-   - TIMEZONE=Europe/Paris
+   - REGION=US Dallas
+   - WATCHER_TIMEZONE=America/Dallas
+   - WATCHER_TIMEZONE_OFFSET=-6
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=45
+   - END_WATCH_MINUTE=8
   restart: always
  visi7_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun7
+  depends_on:
+   gluetun7:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_7_0
   environment:
    # More variables are available, see the readme table
-   - REGION=Hong Kong
-   - TIMEZONE=Asia/Hong_Kong
+   - REGION=US Denver
+   - WATCHER_TIMEZONE=America/Colorado
+   - WATCHER_TIMEZONE_OFFSET=-7
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=4
+   - END_WATCH_MINUTE=55
   restart: always
  visi8_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun8
+  depends_on:
+   gluetun8:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_8_0
   environment:
    # More variables are available, see the readme table
-   - REGION=Japan Tokyo
-   - TIMEZONE=Asia/Tokyo
+   - REGION=US Detroit
+   - WATCHER_TIMEZONE=America/Detroit
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=44
+   - END_WATCH_MINUTE=46
   restart: always
  visi9_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun9
+  depends_on:
+   gluetun9:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_9_0
   environment:
    # More variables are available, see the readme table
-   - REGION=Malaysia
-   - TIMEZONE=Asia/Kuala_Lumpur
+   - REGION=US Houston
+   - WATCHER_TIMEZONE=America/Texas
+   - WATCHER_TIMEZONE_OFFSET=-6
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=26
+   - END_WATCH_MINUTE=23
   restart: always
  visi10_0:
-  image: zield1201/visi_puppet_node:latest
+  image: zield1201/visi-mini:latest
   network_mode: service:gluetun10
+  depends_on:
+   gluetun10:
+    condition: service_healthy
   volumes:
    - /yourpath:/visi_10_0
   environment:
    # More variables are available, see the readme table
+   - REGION=US Kansas City
+   - WATCHER_TIMEZONE=America/Kansas
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=53
+   - END_WATCH_MINUTE=23
+  restart: always
+ visi11_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun11
+  depends_on:
+   gluetun11:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_11_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Latham
+   - WATCHER_TIMEZONE=America/New_York
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=40
+   - END_WATCH_MINUTE=21
+  restart: always
+ visi12_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun12
+  depends_on:
+   gluetun12:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_12_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Las Vegas
+   - WATCHER_TIMEZONE=America/Nevada
+   - WATCHER_TIMEZONE_OFFSET=-8
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=57
+   - END_WATCH_MINUTE=49
+  restart: always
+ visi13_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun13
+  depends_on:
+   gluetun13:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_13_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Los Angeles
+   - WATCHER_TIMEZONE=America/
+   - WATCHER_TIMEZONE_OFFSET=-8
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=11
+   - END_WATCH_MINUTE=35
+  restart: always
+ visi14_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun14
+  depends_on:
+   gluetun14:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_14_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Maryland
+   - WATCHER_TIMEZONE=America/Maryland
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=32
+   - END_WATCH_MINUTE=7
+  restart: always
+ visi15_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun15
+  depends_on:
+   gluetun15:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_15_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Miami
+   - WATCHER_TIMEZONE=America/Florida
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=41
+   - END_WATCH_MINUTE=58
+  restart: always
+ visi16_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun16
+  depends_on:
+   gluetun16:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_16_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US New York City
+   - WATCHER_TIMEZONE=America/New_York
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=49
+   - END_WATCH_MINUTE=3
+  restart: always
+ visi17_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun17
+  depends_on:
+   gluetun17:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_17_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US New York City mp001
+   - WATCHER_TIMEZONE=America/New_York
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=14
+   - END_WATCH_MINUTE=57
+  restart: always
+ visi18_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun18
+  depends_on:
+   gluetun18:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_18_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US New York City st001
+   - WATCHER_TIMEZONE=America/New_York
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=35
+   - END_WATCH_MINUTE=49
+  restart: always
+ visi19_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun19
+  depends_on:
+   gluetun19:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_19_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US New York City st002
+   - WATCHER_TIMEZONE=America/New_York
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=2
+   - END_WATCH_MINUTE=4
+  restart: always
+ visi20_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun20
+  depends_on:
+   gluetun20:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_20_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US New York City st003
+   - WATCHER_TIMEZONE=America/New_York
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=8
+   - END_WATCH_MINUTE=31
+  restart: always
+ visi21_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun21
+  depends_on:
+   gluetun21:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_21_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US New York City st004
+   - WATCHER_TIMEZONE=America/New_York
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=2
+   - END_WATCH_MINUTE=28
+  restart: always
+ visi22_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun22
+  depends_on:
+   gluetun22:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_22_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US New York City st005
+   - WATCHER_TIMEZONE=America/New_York
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=11
+   - END_WATCH_MINUTE=38
+  restart: always
+ visi23_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun23
+  depends_on:
+   gluetun23:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_23_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Orlando
+   - WATCHER_TIMEZONE=America/Florida
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=26
+   - END_WATCH_MINUTE=38
+  restart: always
+ visi24_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun24
+  depends_on:
+   gluetun24:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_24_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Phoenix
+   - WATCHER_TIMEZONE=America/Florida
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=10
+   - END_WATCH_MINUTE=44
+  restart: always
+ visi25_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun25
+  depends_on:
+   gluetun25:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_25_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Salt Lake City
+   - WATCHER_TIMEZONE=America/Salt_Lake_City
+   - WATCHER_TIMEZONE_OFFSET=-7
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=43
+   - END_WATCH_MINUTE=6
+  restart: always
+ visi26_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun26
+  depends_on:
+   gluetun26:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_26_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US San Francisco
+   - WATCHER_TIMEZONE=America/San_Francisco
+   - WATCHER_TIMEZONE_OFFSET=-8
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=36
+   - END_WATCH_MINUTE=1
+  restart: always
+ visi27_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun27
+  depends_on:
+   gluetun27:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_27_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Seatle
+   - WATCHER_TIMEZONE=Amerca/Washington
+   - WATCHER_TIMEZONE_OFFSET=-8
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=37
+   - END_WATCH_MINUTE=48
+  restart: always
+ visi28_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun28
+  depends_on:
+   gluetun28:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_28_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US St Louis
+   - WATCHER_TIMEZONE=America/St_Louis
+   - WATCHER_TIMEZONE_OFFSET=-6
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=19
+   - START_WATCH_MINUTE=26
+   - END_WATCH_MINUTE=5
+  restart: always
+ visi29_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun29
+  depends_on:
+   gluetun29:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_29_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=US Tampa
+   - WATCHER_TIMEZONE=America/Florida
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=37
+   - END_WATCH_MINUTE=4
+  restart: always
+ visi30_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun30
+  depends_on:
+   gluetun30:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_30_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=UK Manchester
+   - WATCHER_TIMEZONE=Europe/London
+   - WATCHER_TIMEZONE_OFFSET=0
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=52
+   - END_WATCH_MINUTE=44
+  restart: always
+ visi31_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun31
+  depends_on:
+   gluetun31:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_31_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=UK Glasgow
+   - WATCHER_TIMEZONE=Europe/London
+   - WATCHER_TIMEZONE_OFFSET=11
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=28
+   - END_WATCH_MINUTE=14
+  restart: always
+ visi32_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun32
+  depends_on:
+   gluetun32:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_32_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=UK London mp001
+   - WATCHER_TIMEZONE=Europe/London
+   - WATCHER_TIMEZONE_OFFSET=0
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=8
+   - END_WATCH_MINUTE=20
+  restart: always
+ visi33_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun33
+  depends_on:
+   gluetun33:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_33_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=United Arab Emirates
+   - WATCHER_TIMEZONE=Asia/Qatar
+   - WATCHER_TIMEZONE_OFFSET=4
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=15
+   - END_WATCH_MINUTE=9
+  restart: always
+ visi34_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun34
+  depends_on:
+   gluetun34:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_34_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Australia Sydney
+   - WATCHER_TIMEZONE=Australia/Sydney
+   - WATCHER_TIMEZONE_OFFSET=11
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=11
+   - END_WATCH_MINUTE=49
+  restart: always
+ visi35_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun35
+  depends_on:
+   gluetun35:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_35_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Australia Brisbane
+   - WATCHER_TIMEZONE=Australia/Brisbane
+   - WATCHER_TIMEZONE_OFFSET=10
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=33
+   - END_WATCH_MINUTE=38
+  restart: always
+ visi36_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun36
+  depends_on:
+   gluetun36:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_36_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Australia Melbourne
+   - WATCHER_TIMEZONE=Australia/Melbourne
+   - WATCHER_TIMEZONE_OFFSET=10
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=29
+   - END_WATCH_MINUTE=59
+  restart: always
+ visi37_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun37
+  depends_on:
+   gluetun37:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_37_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Australia Adelaide
+   - WATCHER_TIMEZONE=Australia/Adelaide
+   - WATCHER_TIMEZONE_OFFSET=10.5
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=19
+   - START_WATCH_MINUTE=51
+   - END_WATCH_MINUTE=3
+  restart: always
+ visi38_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun38
+  depends_on:
+   gluetun38:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_38_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Australia Perth
+   - WATCHER_TIMEZONE=Australia/Perth
+   - WATCHER_TIMEZONE_OFFSET=8
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=23
+   - END_WATCH_MINUTE=7
+  restart: always
+ visi39_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun39
+  depends_on:
+   gluetun39:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_39_0
+  environment:
+   # More variables are available, see the readme table
    - REGION=New Zealand
-   - TIMEZONE=Pacific/Auckland
+   - WATCHER_TIMEZONE=Pacific/Auckland
+   - WATCHER_TIMEZONE_OFFSET=13
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=26
+   - END_WATCH_MINUTE=22
+  restart: always
+ visi40_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun40
+  depends_on:
+   gluetun40:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_40_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=UK France
+   - WATCHER_TIMEZONE=Europe/Paris
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=23
+   - END_WATCH_MINUTE=56
+  restart: always
+ visi41_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun41
+  depends_on:
+   gluetun41:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_41_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=France Paris
+   - WATCHER_TIMEZONE=Europe/Paris
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=49
+   - END_WATCH_MINUTE=32
+  restart: always
+ visi42_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun42
+  depends_on:
+   gluetun42:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_42_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=France Marseille
+   - WATCHER_TIMEZONE=Europe/Paris
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=10
+   - END_WATCH_MINUTE=31
+  restart: always
+ visi43_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun43
+  depends_on:
+   gluetun43:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_43_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Germany Berlin
+   - WATCHER_TIMEZONE=Europe/Berlin
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=33
+   - END_WATCH_MINUTE=47
+  restart: always
+ visi44_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun44
+  depends_on:
+   gluetun44:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_44_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=UK Germany
+   - WATCHER_TIMEZONE=Europe/Berlin
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=48
+   - END_WATCH_MINUTE=34
+  restart: always
+ visi45_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun45
+  depends_on:
+   gluetun45:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_45_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Germany Frankfurt am Main
+   - WATCHER_TIMEZONE=Europe/Frankfurt
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=37
+   - END_WATCH_MINUTE=42
+  restart: always
+ visi46_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun46
+  depends_on:
+   gluetun46:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_46_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Germany Frankfurt am Main st001
+   - WATCHER_TIMEZONE=Europe/Frankfurt
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=20
+   - END_WATCH_MINUTE=35
+  restart: always
+ visi47_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun47
+  depends_on:
+   gluetun47:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_47_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Germany Frankfurt am Main st002
+   - WATCHER_TIMEZONE=Europe/Frankfurt
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=6
+   - END_WATCH_MINUTE=8
+  restart: always
+ visi48_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun48
+  depends_on:
+   gluetun48:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_48_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Germany Frankfurt am Main st003
+   - WATCHER_TIMEZONE=Europe/Frankfurt
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=19
+   - START_WATCH_MINUTE=57
+   - END_WATCH_MINUTE=28
+  restart: always
+ visi49_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun49
+  depends_on:
+   gluetun49:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_49_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Germany Frankfurt am Main st004
+   - WATCHER_TIMEZONE=Europe/Frankfurt
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=54
+   - END_WATCH_MINUTE=27
+  restart: always
+ visi50_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun50
+  depends_on:
+   gluetun50:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_50_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Germany Frankfurt am Main st005
+   - WATCHER_TIMEZONE=Europe/Frankfurt
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=0
+   - END_WATCH_MINUTE=11
+  restart: always
+ visi51_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun51
+  depends_on:
+   gluetun51:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_51_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Germany Frankfurt mp001
+   - WATCHER_TIMEZONE=Europe/Frankfurt
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=28
+   - END_WATCH_MINUTE=13
+  restart: always
+ visi52_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun52
+  depends_on:
+   gluetun52:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_52_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Germany Singapour
+   - WATCHER_TIMEZONE=Europe/Frankfurt
+   - WATCHER_TIMEZONE_OFFSET=1
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=49
+   - END_WATCH_MINUTE=44
+  restart: always
+ visi53_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun53
+  depends_on:
+   gluetun53:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_53_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Canada Toronto
+   - WATCHER_TIMEZONE=America/Toronto
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=21
+   - END_WATCH_MINUTE=33
+  restart: always
+ visi54_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun54
+  depends_on:
+   gluetun54:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_54_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Canada Toronto mp001
+   - WATCHER_TIMEZONE=America/Toronto
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=42
+   - END_WATCH_MINUTE=55
+  restart: always
+ visi55_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun55
+  depends_on:
+   gluetun55:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_55_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Canada Montreal
+   - WATCHER_TIMEZONE=America/Montreal
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=5
+   - END_WATCH_MINUTE=46
+  restart: always
+ visi56_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun56
+  depends_on:
+   gluetun56:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_56_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Canada Vancouver
+   - WATCHER_TIMEZONE=America/Vancouver
+   - WATCHER_TIMEZONE_OFFSET=-5
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=9
+   - END_WATCH_MINUTE=9
+  restart: always
+ visi57_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun57
+  depends_on:
+   gluetun57:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_57_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Singapore st001
+   - WATCHER_TIMEZONE=Asia/Singapore
+   - WATCHER_TIMEZONE_OFFSET=8
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=0
+   - END_WATCH_MINUTE=24
+  restart: always
+ visi58_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun58
+  depends_on:
+   gluetun58:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_58_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Singapore st002
+   - WATCHER_TIMEZONE=Asia/Singapore
+   - WATCHER_TIMEZONE_OFFSET=8
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=21
+   - END_WATCH_MINUTE=16
+  restart: always
+ visi59_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun59
+  depends_on:
+   gluetun59:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_59_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Singapore st003
+   - WATCHER_TIMEZONE=Asia/Singapore
+   - WATCHER_TIMEZONE_OFFSET=8
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=19
+   - START_WATCH_MINUTE=39
+   - END_WATCH_MINUTE=44
+  restart: always
+ visi60_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun60
+  depends_on:
+   gluetun60:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_60_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Hong Kong
+   - WATCHER_TIMEZONE=Asia/Hong_Kong
+   - WATCHER_TIMEZONE_OFFSET=8
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=19
+   - START_WATCH_MINUTE=47
+   - END_WATCH_MINUTE=50
+  restart: always
+ visi61_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun61
+  depends_on:
+   gluetun61:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_61_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=52
+   - END_WATCH_MINUTE=27
+  restart: always
+ visi62_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun62
+  depends_on:
+   gluetun62:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_62_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st001
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=20
+   - START_WATCH_MINUTE=38
+   - END_WATCH_MINUTE=28
+  restart: always
+ visi63_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun63
+  depends_on:
+   gluetun63:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_63_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st002
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=19
+   - START_WATCH_MINUTE=13
+   - END_WATCH_MINUTE=17
+  restart: always
+ visi64_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun64
+  depends_on:
+   gluetun64:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_64_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st003
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=48
+   - END_WATCH_MINUTE=39
+  restart: always
+ visi65_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun65
+  depends_on:
+   gluetun65:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_65_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st004
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=40
+   - END_WATCH_MINUTE=7
+  restart: always
+ visi66_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun66
+  depends_on:
+   gluetun66:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_66_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st005
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=19
+   - START_WATCH_MINUTE=47
+   - END_WATCH_MINUTE=56
+  restart: always
+ visi67_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun67
+  depends_on:
+   gluetun67:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_67_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st006
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=37
+   - END_WATCH_MINUTE=0
+  restart: always
+ visi68_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun68
+  depends_on:
+   gluetun68:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_68_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st007
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=53
+   - END_WATCH_MINUTE=13
+  restart: always
+ visi69_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun69
+  depends_on:
+   gluetun69:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_69_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st008
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=9
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=41
+   - END_WATCH_MINUTE=7
+  restart: always
+ visi70_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun70
+  depends_on:
+   gluetun70:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_70_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st009
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=58
+   - END_WATCH_MINUTE=39
+  restart: always
+ visi71_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun71
+  depends_on:
+   gluetun71:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_71_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st010
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=37
+   - END_WATCH_MINUTE=51
+  restart: always
+ visi72_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun72
+  depends_on:
+   gluetun72:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_72_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st011
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=19
+   - START_WATCH_MINUTE=48
+   - END_WATCH_MINUTE=24
+  restart: always
+ visi73_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun73
+  depends_on:
+   gluetun73:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_73_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st012
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=8
+   - END_WATCH_HOUR=23
+   - START_WATCH_MINUTE=2
+   - END_WATCH_MINUTE=50
+  restart: always
+ visi74_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun74
+  depends_on:
+   gluetun74:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_74_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Japan Tokyo st013
+   - WATCHER_TIMEZONE=Asia/Tokyo
+   - WATCHER_TIMEZONE_OFFSET=9
+   - START_WATCH_HOUR=10
+   - END_WATCH_HOUR=22
+   - START_WATCH_MINUTE=30
+   - END_WATCH_MINUTE=9
+  restart: always
+ visi75_0:
+  image: zield1201/visi-mini:latest
+  network_mode: service:gluetun75
+  depends_on:
+   gluetun75:
+    condition: service_healthy
+  volumes:
+   - /yourpath:/visi_75_0
+  environment:
+   # More variables are available, see the readme table
+   - REGION=Philippines Manila
+   - WATCHER_TIMEZONE=
+   - WATCHER_TIMEZONE_OFFSET=8
+   - START_WATCH_HOUR=7
+   - END_WATCH_HOUR=21
+   - START_WATCH_MINUTE=5
+   - END_WATCH_MINUTE=25
   restart: always
