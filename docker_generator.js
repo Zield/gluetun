@@ -240,8 +240,10 @@ async function generateVisiContainers(regions,containersPerVpn){
 }
 
 function randomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+    let tempNumber =  Math.floor(Math.random() * (max - min + 1)) + min;
+    tempNumber = tempNumber > 9 ? tempNumber : '0' + tempNumber;
+    return
+}
 
 /*async function getOffSet(region){
     let offest = 0;
