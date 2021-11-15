@@ -210,8 +210,8 @@ async function generateVisiContainers(regions,containersPerVpn){
     for(let i=0;i<regions.length;i++){
         for(let x=0;x<containersPerVpn;x++){
             writeFile(' '+'visi'+i+'_'+x+':' + '\n');
-            //writeFile('  '+'image: zield1201/visi_puppet_node:latest' + '\n');
-            writeFile('  '+'image: zield1201/visi-mini:latest' + '\n');
+            writeFile('  '+'image: zield1201/visi_puppet_node:latest' + '\n');
+            //writeFile('  '+'image: zield1201/visi-mini:latest' + '\n');
             //writeFile('  '+'cap_add:' + '\n');
             //writeFile('   '+'- NET_ADMIN'+ '\n');
             //writeFile('  '+'depends_on: gluetun'+i+ '\n');
